@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class functionPractice {
 
 	public static Scanner sc = new Scanner(System.in);
@@ -7,6 +7,16 @@ public class functionPractice {
 
 	}
 
+	public static int numDigit(int num){
+		//לוקחת מספר ומחזירה את מספר הספרות שלו
+		int counter = 0;
+		while (num > 0){
+			counter++;
+			num /= 10;
+		}
+		return counter;
+	}
+	
 	public static int targil4(int num, int dig) {
 		// לוקח מספר שלם וספרה
 		// מחזיר את כמות הפעמים שהספרה מופיעה במספר
@@ -97,6 +107,7 @@ public class functionPractice {
 	}
 	
 	public static int tenths(int num){
+		//מקבלת מספר אם ומחזירה את ערך העשרת של המספר
 		if (num <= 10)
 			return 1;
 		else if (num == 100)
@@ -105,6 +116,16 @@ public class functionPractice {
 			return num / 10;
 	}
 	
+	public static int ffi(int num){
+		int last, first;
+		for (int i = 0; i < 2; i++){
+			last =(int) (num / Math.pow(10, numDigit(num) - 1));
+			first = num % 10;
+			num *= 10;
+			num += (last + first) % 10;
+		}
+		return num;
+	}
 	
 
 }
