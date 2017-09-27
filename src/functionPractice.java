@@ -44,6 +44,16 @@ public class functionPractice {
 			}
 		return total;
 	}
+	public static boolean between(int num1, int num2, int num3){
+		// מקבל שלוש מספרים
+		// מחזיר אמת אם המספר הראשון הוא בין המספר השני והשלישי
+		if (num1 > num2 && num1 < num3)
+			return true;
+		else if (num1 < num2 && num1 > num3)
+			return true;
+		
+			return false;
+	}
 	
 	
 }
