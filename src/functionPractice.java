@@ -116,16 +116,6 @@ public class functionPractice {
 			return num / 10;
 	}
 	
-	public static int ffi(int num){
-		int last, first;
-		for (int i = 0; i < 2; i++){
-			last =(int) (num / Math.pow(10, numDigit(num) - 1));
-			first = num % 10;
-			num *= 10;
-			num += (last + first) % 10;
-		}
-		return num;
-	}
 	
 
 }
