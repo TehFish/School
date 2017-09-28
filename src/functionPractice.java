@@ -116,6 +116,10 @@ public class functionPractice {
 			return num / 10;
 	}
 	
+	public static boolean firstAndLast(String s){
+		//מקבלת מילה ומחזירה אמת אם התו הראשון והאחרון שווים ושקר אחרת
+		return s.charAt(0) == s.charAt(s.length() - 1);
+	}
 	
 
 }
