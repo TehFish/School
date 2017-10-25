@@ -9,7 +9,7 @@ public class BooleanPaper20 {
 			num = sc.nextInt();
 			functionPractice.following(num);
 		}
-
+		sc.close();
 	}
 
 }

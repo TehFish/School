@@ -11,5 +11,6 @@ public class Function6 {
 				maxNum = num;
 		}
 		System.out.println(maxNum);
+		sc.close();
 	}
 }

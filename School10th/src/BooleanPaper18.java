@@ -12,7 +12,7 @@ public class BooleanPaper18 {
 				counter++;
 		}
 		System.out.println(counter);
-		
+		sc.close();
 	}
 
 }

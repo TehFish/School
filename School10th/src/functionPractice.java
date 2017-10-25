@@ -147,7 +147,7 @@ public class functionPractice {
 
 	public static void StringPaperEx4(int min, int max) {
 		//input two numbers output the numbers that apply to the condition
-		if (min > 100 && min < 1000 && max > 100 && max < 1000) {
+		if (min > 99 && min < 1000 && max > 100 && max < 1000) {
 			int tens, hundreds, singles;
 			for (int i = min; i < max; i++) {
 				singles = i % 10;

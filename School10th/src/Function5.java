@@ -11,7 +11,7 @@ public class Function5 {
 			for (int i = 0; i < 5; i++)
 				System.out.println(functionPractice.targil5(num1, num2)); 
 		}
-
+		sc.close();
 	}
 
 }
