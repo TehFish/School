@@ -173,5 +173,23 @@ public class functionPractice {
 		}
 		return max;
 	}
+	
+	public static int firstCh(String s, char c) {
+		//Input a char and a string, if that char is in the string output the index of its first occurrence else output -1
+		return s.indexOf(c);
+	}
+	
+	public static int lastCh(String s, char c) {
+		//Input a char and a string, if that char is in the string output the index of its last occurrence else output -1
+		for (int i = s.length(); i > 0; i--) {
+			if (s.charAt(i) == c) return i;
+		}
+		return -1;
+	}
+	
+	public static double sumPractice7(String s) {
+		String[] s2 = s.split(" ", 20);
+		return s2.length * 0.1;
+	}
 
 }
