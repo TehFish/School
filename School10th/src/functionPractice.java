@@ -157,6 +157,21 @@ public class functionPractice {
 			}
 		}
 	}
-
+	
+	public static int longWord(String w) {
+		//...
+		String s;
+		int max = 0;
+		
+		for (int i = 0; i < w.length(); i++) {
+			if (w.charAt(i) == '.') {
+				s = w.substring(0, i);
+				w = w.substring(w.length());
+				i = 0;
+				if (s.length() > max) max = s.length();
+			}
+		}
+		return max;
+	}
 
 }
