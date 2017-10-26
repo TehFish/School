@@ -4,7 +4,7 @@ public class SumPractice9 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
+		
 
 	}
 	public static void up(int num) {
