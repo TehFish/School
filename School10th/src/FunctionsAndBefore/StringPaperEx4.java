@@ -1,3 +1,4 @@
+package FunctionsAndBefore;
 
 public class StringPaperEx4 {
 

@@ -1,3 +1,4 @@
+package FunctionsAndBefore;
 import java.util.Scanner;
 public class Page48Ex25 {
 

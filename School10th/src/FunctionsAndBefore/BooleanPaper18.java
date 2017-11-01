@@ -1,3 +1,4 @@
+package FunctionsAndBefore;
 import java.util.Scanner;
 public class BooleanPaper18 {
 
