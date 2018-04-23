@@ -5,6 +5,7 @@ public class Actor {
 	private int yearsActing;
 	private int age;
 	private boolean awardWon;
+	private boolean check;
 	
 	public Actor(String name, int yearsActing, int age, boolean awardWon) {
 		super();
@@ -14,6 +15,12 @@ public class Actor {
 		this.awardWon = awardWon;
 	}
 	
+	public boolean isCheck() {
+		return this.check;
+	}
+	public void setCheck(boolean check) {
+		this.check = check;
+	}
 	public String getName() {
 		return name;
 	}

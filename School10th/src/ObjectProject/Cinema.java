@@ -37,17 +37,15 @@ public class Cinema {
 
 	public void showActorsInMovies(Movie[] m) {
 		String[] movieNames;
-		String[] actorsChecked;
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[i].getActorNum(); j++) {
-				actorsChecked = new String[m[i].getActorNum()];
 				if (actorInDifferentMovies(m[i].getActors()[j].getName(), m, i)
-						&& actorsChecked(actorsChecked, m[i].getActors()[j])) {
+						&& m[i].getActors()[j].isCheck()) {
 					System.out.println("Actor: "+m[i].getActors()[j].getName());
 					movieNames = moviesActorIsIn(m, m[i].getActors()[j].getName());
 					for (int k = 0; k < movieNames.length; k++)
 						if (!movieNames[k].equals("")) System.out.println(movieNames[k]);
-					actorsChecked[j] = m[i].getActors()[j].getName();
+					m[i].getActors()[j].setCheck(false);
 				}
 			}
 		}
