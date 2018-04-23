@@ -13,6 +13,7 @@ public class Actor {
 		this.yearsActing = yearsActing;
 		this.age = age;
 		this.awardWon = awardWon;
+		this.check = false;
 	}
 	
 	public boolean isCheck() {

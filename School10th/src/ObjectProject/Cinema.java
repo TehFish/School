@@ -40,12 +40,12 @@ public class Cinema {
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[i].getActorNum(); j++) {
 				if (actorInDifferentMovies(m[i].getActors()[j].getName(), m, i)
-						&& m[i].getActors()[j].isCheck()) {
+						&& !m[i].getActors()[j].isCheck()) {
 					System.out.println("Actor: "+m[i].getActors()[j].getName());
 					movieNames = moviesActorIsIn(m, m[i].getActors()[j].getName());
 					for (int k = 0; k < movieNames.length; k++)
 						if (!movieNames[k].equals("")) System.out.println(movieNames[k]);
-					m[i].getActors()[j].setCheck(false);
+					m[i].getActors()[j].setCheck(true);
 				}
 			}
 		}
