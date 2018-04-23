@@ -10,7 +10,7 @@ public class Cinema {
 		this.movies = movies;
 		this.showingNum = this.movies.length;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -45,8 +45,8 @@ public class Cinema {
 					movieNames = moviesActorIsIn(m, m[i].getActors()[j].getName());
 					for (int k = 0; k < movieNames.length; k++)
 						if (!movieNames[k].equals("")) System.out.println(movieNames[k]);
-					m[i].getActors()[j].setCheck(true);
 				}
+				makeCheckFalse(m, m[i].getActors()[j].getName());
 			}
 		}
 	}
@@ -60,7 +60,7 @@ public class Cinema {
 		}
 		return false;
 	}
-	
+
 	public String[] moviesActorIsIn(Movie[] m, String actor) {
 		String[] movieNames = new String[m.length];
 		for (int i = 0; i < m.length; i++) {
@@ -69,10 +69,19 @@ public class Cinema {
 		}
 		return movieNames;
 	}
-	
+
 	public boolean actorsChecked(String[] actors, Actor a) {
 		for (int i = 0; i < actors.length; i++)
 			if (actors[i].equals(a.getName())) return false;
 		return true;
+	}
+
+	public void makeCheckFalse(Movie[] m, String actorName) {
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[i].getActorNum(); j++) {
+				if (m[i].getActors()[j].getName().equals(actorName))
+					m[i].getActors()[j].setCheck(true);
+			}
+		}
 	}
 }
